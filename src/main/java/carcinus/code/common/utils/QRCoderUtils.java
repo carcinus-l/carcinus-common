@@ -35,21 +35,13 @@ public class QRCoderUtils {
                 BarcodeFormat.QR_CODE, qrCodeSize, qrCodeSize, hints);
     }
 
-    /**
-     * 生成二維碼
-     *
-     * @param qrCodeData 二維碼字串
-     */
+
     public static void parseQRCodeToConsole(String qrCodeData, String charset, int qrCodeSize, Hashtable hints)
             throws WriterException, IOException {
         BitMatrix bitMatrix = parseQRCode(qrCodeData, charset, qrCodeSize, hints);
         toConsole(bitMatrix);
     }
-    /**
-     * 生成二維碼
-     *
-     * @param qrCodeData 二維碼字串
-     */
+
     public static void parseQRCodeToConsole(String qrCodeData)
             throws WriterException, IOException {
         BitMatrix bitMatrix = parseQRCode(qrCodeData, DEFAULT_CHARSET, DEFAULT_QR_CODE_SIZE, DEFAULT_HINTS);
@@ -77,11 +69,7 @@ public class QRCoderUtils {
         System.out.println(sb);
     }
 
-    /**
-     * 讀取二維碼
-     *
-     * @param filePath 檔案路徑
-     */
+
     public static String readQRCode(String filePath)
             throws FileNotFoundException, IOException, NotFoundException {
         BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(
