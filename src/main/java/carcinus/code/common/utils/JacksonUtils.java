@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 
 import java.io.IOException;
 
-public class JsonUtils {
+public class JacksonUtils {
     public static ObjectMapper mapper = new ObjectMapper();
 
     static {
